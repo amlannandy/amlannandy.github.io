@@ -49,6 +49,15 @@ window.addEventListener("keydown", ()  => { textarea.focus(); scrollToBottom(); 
 document.addEventListener("click", ()  => { textarea.focus(); scrollToBottom(); });
 terminal.addEventListener("click", ()  => { textarea.focus(); scrollToBottom(); });
 textarea.addEventListener("input", scrollToBottom);
+
+/* Mobile: scroll to bottom when the virtual keyboard opens/closes */
+textarea.addEventListener("focus", () => setTimeout(scrollToBottom, 300));
+if (window.visualViewport) {
+  window.visualViewport.addEventListener("resize", () => {
+    scrollToBottom();
+    textarea.focus();
+  });
+}
 textarea.value   = "";
 command.innerHTML = "";
 

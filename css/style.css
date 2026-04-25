@@ -54,7 +54,7 @@ a:hover {
   background-color: var(--color-bg-overlay);
   border-radius: 4px;
   width: 100%;
-  min-height: 98vh;
+  min-height: 98dvh;
   max-height: 105vh;
   box-shadow:
     0 20px 25px -5px var(--color-shadow),
@@ -100,7 +100,7 @@ hr {
   overflow-y: scroll;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  height: calc(98vh - 46px);
+  height: calc(98dvh - 46px);
 }
 
 #contentscroll::-webkit-scrollbar {
@@ -271,39 +271,6 @@ hr {
 
 .error { color: var(--color-error); }
 
-/* ── Status bar ── */
-
-.bottom-bar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 0.4rem 1rem;
-  z-index: 50;
-  pointer-events: none;
-}
-
-.status-panel {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: var(--step--2);
-  color: var(--color-tertiary);
-  float: right;
-}
-
-.status-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background-color: var(--color-primary);
-  animation: pulse 2.5s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50%       { opacity: 0.3; }
-}
 
 /* ── Accessibility ── */
 
